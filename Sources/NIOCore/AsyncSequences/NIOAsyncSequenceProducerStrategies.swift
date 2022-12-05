@@ -42,7 +42,6 @@ public enum NIOAsyncSequenceProducerBackPressureStrategies {
         public mutating func didConsume(bufferDepth: Int) -> Bool {
             // We start demanding again once we are below the low watermark
            // bufferDepth < self.lowWatermark
-            
                     print("\(bufferDepth) \(self.lowWatermark)")
                   return  bufferDepth < self.lowWatermark
         }
